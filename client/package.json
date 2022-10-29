@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "homepage": "https://fe-jul22-cookieteam.github.io/product-catalog/",
+  "homepage": "https://fe-jul22-cookieteam.github.io/product_catalog/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
