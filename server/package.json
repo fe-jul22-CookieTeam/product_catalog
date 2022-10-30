@@ -13,12 +13,11 @@
   "scripts": {
     "start": "nodemon src/server.js",
     "format": "prettier --write . --ignore-path .gitignore",
-    "lint": "eslint . --ignore-path .gitignore --fix",
-    "fix-style": "npm run format && npm run lint",
+    "lint": "eslint . --ignore-path .gitignore",
+    "fix-style": "npm run format && npm run lint -- --fix",
     "prepare": "cd .. && husky install ./server/.husky"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.gitignore": "prettier --write"
+    "*.js": "npm run lint"
   }
 }
