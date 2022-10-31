@@ -1,5 +1,3 @@
 import './FavouritesPage.module.scss';
 
-export const FavouritesPage = () => (
-  <h1>Favourites Page</h1>
-);
+export const FavouritesPage = () => <h1>Favourites Page</h1>;
