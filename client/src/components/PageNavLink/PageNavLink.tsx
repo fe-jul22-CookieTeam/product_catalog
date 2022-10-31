@@ -9,6 +9,7 @@ type Props = {
 export const PageNavLink: FC<Props> = ({ to, text }) => (
   <NavLink
     to={to}
+    className="header__link"
   >
     {text}
   </NavLink>
