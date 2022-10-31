@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom';
-import { NavBar } from './components/NavBar';
-import './App.scss';
+import { Header } from './components/Header';
+import './styles/App.scss';
 
 const App = () => {
   return (
     <>
-      <NavBar />
+      <Header />
 
       <div className="main">
         <Outlet />
