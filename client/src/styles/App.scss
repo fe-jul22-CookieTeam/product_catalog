@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Mont', sans-serif;
+  src: url(./font/Mont-Bold.otf);
+  src: url(./font/Mont-SemiBold.otf);
+  src: url(./font/Mont-Regular.otf);
+}
+
+html {
+  font-family: 'Mont', sans-serif;
+  background-color: #0F1121;
+  scroll-behavior: smooth;
+}
+
