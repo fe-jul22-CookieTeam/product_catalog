@@ -1,11 +1,16 @@
-import './App.scss';
+import { Outlet } from 'react-router-dom';
+import { Header } from './components/Header';
+import './styles/App.scss';
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Hello, world!</h1>
-      <p>Page info</p>
-    </div>
+    <>
+      <Header />
+
+      <div className="main">
+        <Outlet />
+      </div>
+    </>
   );
 };
 

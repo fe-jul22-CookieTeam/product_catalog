@@ -1,0 +1,114 @@
+@import '../../styles/main.scss';
+
+.header {
+  display: flex;
+  border-bottom: 1px solid $secondary;
+
+  &__left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include onPhone {
+      padding: 16px;
+    }
+
+    @include onTablet {
+      padding-left: 16px;
+    }
+
+    @include onDesktop {
+      padding-left: 24px;
+    }
+  }
+
+  &__links {
+    @include onPhone {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $secondary;
+    position: relative;
+    padding-bottom: 10px;
+
+    @include onPhone {
+      padding-right: 32px;
+    }
+
+    @include onTablet {
+      padding-right: 32px;
+    }
+
+    @include onDesktop {
+      padding-right: 64px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    background-image: url(../../images/logo.png);
+    height: 22px;
+    width: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include onTablet {
+      padding-right: 32px;
+    }
+
+    @include onDesktop {
+      padding-right: 64px;
+      height: 26px;
+      width: 80px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+
+    @include onPhone {
+      display: none;
+    }
+
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 48px;
+      height: 48px;
+      border-left: 1px solid $secondary;
+
+      @include onDesktop {
+        width: 64px;
+        height: 64px;
+      }
+    }
+
+    &-favourites {
+      background-image: url(../../images/favourites.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &-cart {
+      background-image: url(../../images/favourites.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
