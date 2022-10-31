@@ -1,6 +1,6 @@
 import './App.scss';
-import { CatalogPage } from './components/CatalogPage';
-import { HomePage } from './components/HomePage';
+import { CatalogPage } from './pages/CatalogPage';
+import { HomePage } from './pages/HomePage';
 
 const App = () => {
   return (
