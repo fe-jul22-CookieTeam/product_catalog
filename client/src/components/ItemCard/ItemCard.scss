@@ -1,0 +1,78 @@
+.item {
+  box-sizing: border-box;
+  margin: 17px;
+  text-align: center;
+  background-color: #161827;
+  max-width: 287px;
+  padding: 32px;
+
+  &__image {
+    height: 130px;
+    margin: 0 auto;
+    margin: 24px;
+  }
+
+  &__title {
+    font-family: "Mont", sans-serif;
+    color: #F1F2F9;
+    font-weight: 600;
+    text-align: left;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 8px;
+  }
+
+  &__price {
+    color: #F1F2F9;
+    font-weight: 800;
+    text-align: left;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: solid #3B3E4A 1px;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #75767F;
+  //border-top: solid #3B3E4A 1px;
+  margin-top: 16px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__value {
+    color: #F1F2F9;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px;
+
+  &__addToCart {
+    background-color: #905BFF;
+    color: #F1F2F9;
+    border-top: solid transparent 1px;
+    padding: 10px 47px;
+    margin-right: 8px;
+  }
+
+  &__addToFavourites {
+    padding: 10px 15px 10px 15px;
+    background-color: #323542;
+    color: #F1F2F9;
+    border: solid transparent 1px;
+  
+    &:hover {
+      background-color: #4A4D58;
+    }
+  }
+}
+
