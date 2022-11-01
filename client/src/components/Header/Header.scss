@@ -2,7 +2,8 @@
 
 .header {
   display: flex;
-  border-bottom: 1px solid $secondary;
+  justify-content: space-between;
+  box-shadow: 0 1px 0 $secondary;
 
   &__left {
     display: flex;
@@ -10,21 +11,34 @@
     align-items: center;
 
     @include onPhone {
-      padding: 16px;
+      padding-left: 16px;
+      height: 48px;
     }
 
     @include onTablet {
       padding-left: 16px;
+      height: 48px;
     }
 
     @include onDesktop {
       padding-left: 24px;
+      height: 64px;
     }
   }
 
   &__links {
+    display: flex;
+    align-items: center;
     @include onPhone {
       display: none;
+    }
+
+    @include onTablet {
+      height: 48px;
+    }
+
+    @include onDesktop {
+      height: 64px;
     }
   }
 
@@ -37,22 +51,36 @@
     text-transform: uppercase;
     color: $secondary;
     position: relative;
-    padding-bottom: 10px;
-
-    @include onPhone {
-      padding-right: 32px;
-    }
+    display:  flex;
+    align-items: center;
 
     @include onTablet {
-      padding-right: 32px;
+      margin-right: 32px;
+      height: 48px;
     }
 
     @include onDesktop {
-      padding-right: 64px;
+      margin-right: 64px;
+      height: 64px;
     }
 
     &:last-child {
-      padding-right: 0;
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $white;
+    }
+
+    &-active::after {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      height: 4px;
+      width: 100%;
+      content: "";
+      background-color: $white;
+      border-radius: 8px;
     }
   }
 
@@ -86,12 +114,11 @@
     }
 
     &-link {
-      display: flex;
       justify-content: center;
       align-items: center;
       width: 48px;
       height: 48px;
-      border-left: 1px solid $secondary;
+      box-shadow: -1px 0px 0px $secondary;
 
       @include onDesktop {
         width: 64px;
@@ -106,9 +133,21 @@
     }
 
     &-cart {
-      background-image: url(../../images/favourites.svg);
+      background-image: url(../../images/cart.svg);
       background-position: center;
       background-repeat: no-repeat;
+    }
+  }
+}
+
+.logo {
+  &__link {
+    height: 22px;
+    width: 60px;
+
+    @include onDesktop {
+      height: 26px;
+      width: 80px;
     }
   }
 }
