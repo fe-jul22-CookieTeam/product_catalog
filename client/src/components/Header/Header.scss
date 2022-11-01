@@ -101,13 +101,23 @@
     background-repeat: no-repeat;
 
     @include onTablet {
-      padding-right: 32px;
+      margin-right: 32px;
     }
 
     @include onDesktop {
-      padding-right: 64px;
+      margin-right: 64px;
       height: 26px;
       width: 80px;
+    }
+
+    &-link {
+      height: 22px;
+      width: 60px;
+
+      @include onDesktop {
+        height: 26px;
+        width: 80px;
+      }
     }
   }
 
@@ -192,14 +202,4 @@
   }
 }
 
-.logo {
-  &__link {
-    height: 22px;
-    width: 60px;
 
-    @include onDesktop {
-      height: 26px;
-      width: 80px;
-    }
-  }
-}
