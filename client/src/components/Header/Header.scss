@@ -51,7 +51,7 @@
     text-transform: uppercase;
     color: $secondary;
     position: relative;
-    display:  flex;
+    display: flex;
     align-items: center;
 
     @include onTablet {
@@ -78,7 +78,7 @@
       display: block;
       height: 4px;
       width: 100%;
-      content: "";
+      content: '';
       background-color: $white;
       border-radius: 8px;
     }

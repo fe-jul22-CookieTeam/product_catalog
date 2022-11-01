@@ -1,5 +1,10 @@
 import ReactDOM from 'react-dom/client';
-import { HashRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
+import {
+  HashRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from 'react-router-dom';
 import App from './App';
 import { AccessoriesPage } from './pages/AccessoriesPage';
 import { CartPage } from './pages/CartPage';
