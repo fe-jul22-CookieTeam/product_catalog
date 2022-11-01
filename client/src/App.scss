@@ -1,21 +1,21 @@
-@import './utils/vars';
+@import './styles/utils/vars';
 
 @font-face {
   font-family: Mont;
   font-weight: 600;
-  src: url('../font/Mont-Regular.otf') format('opentype');
+  src: url('./font/Mont-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: Mont;
   font-weight: 700;
-  src: url('../font/Mont-SemiBold.otf') format('opentype');
+  src: url('./font/Mont-SemiBold.otf') format('opentype');
 }
 
 @font-face {
   font-family: Mont;
   font-weight: 800;
-  src: url('../font/Mont-Bold.otf') format('opentype');
+  src: url('./font/Mont-Bold.otf') format('opentype');
 }
 
 html {
