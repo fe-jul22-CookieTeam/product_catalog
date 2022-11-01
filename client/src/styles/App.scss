@@ -1,14 +1,29 @@
+@import './utils/vars';
+
 @font-face {
-  font-family: 'Mont', sans-serif;
-  src: url(../font/Mont-Bold.otf);
-  src: url(../font/Mont-SemiBold.otf);
-  src: url(../font/Mont-Regular.otf);
+  font-family: Mont;
+  font-weight: 600;
+  src: url('../font/Mont-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Mont;
+  font-weight: 700;
+  src: url('../font/Mont-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Mont;
+  font-weight: 800;
+  src: url('../font/Mont-Bold.otf') format('opentype');
 }
 
 html {
   font-family: 'Mont', sans-serif;
-  background-color: #0F1121;
+  background-color: #0f1121;
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  color: $white;
 }
 
 body,
@@ -28,4 +43,3 @@ a {
 ul {
   list-style: none;
 }
-
