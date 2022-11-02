@@ -1,5 +1,6 @@
 @import '../../styles/blocks/container.scss';
 @import '../../styles/main.scss';
+@import '../../styles/blocks/grid.scss';
 
 .cart {
   &__nav {
@@ -24,6 +25,11 @@
       font-size: 12px;
       line-height: 15px;
       color: $white;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -42,29 +48,23 @@
   }
 
   &__content {
-    display: flex;
+    margin-bottom: 80px;
 
     @include onPhone {
+      display: flex;
       flex-direction: column;
       justify-content: center;
+      margin-bottom: 64px;
     }
 
     @include onTablet {
+      display: flex;
       flex-direction: column;
       justify-content: center;
-    }
-
-    @include onDesktop {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
     }
   }
 
   &__products {
-    display: flex;
-    flex-direction: column;
-
     @include onPhone {
       padding-bottom: 32px;
     }
@@ -105,17 +105,5 @@
     align-items: center;
     height: 206px;
     border: 1px solid $elements;
-
-    @include onPhone {
-      margin-bottom: 64px;
-    }
-
-    @include onTablet {
-      margin-bottom: 64px;
-    }
-
-    @include onDesktop {
-      width: 368px;
-    }
   }
 }
