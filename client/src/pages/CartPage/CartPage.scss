@@ -1,1 +1,121 @@
 @import '../../styles/blocks/container.scss';
+@import '../../styles/main.scss';
+
+.cart {
+  &__nav {
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 16px;
+
+    @include onPhone {
+      padding-bottom: 24px;
+    }
+
+    &-arrow {
+      background-image: url('../../images/nav_arrow-left.svg');
+      width: 6px;
+      height: 10px;
+      margin-right: 10px;
+    }
+
+    &-link {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      color: $white;
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.01em;
+    padding-bottom: 32px;
+
+    @include onPhone {
+      font-size: 32px;
+      line-height: 41px;
+    }
+  }
+
+  &__content {
+    display: flex;
+
+    @include onPhone {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @include onTablet {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &__products {
+    display: flex;
+    flex-direction: column;
+
+    @include onPhone {
+      padding-bottom: 32px;
+    }
+
+    @include onTablet {
+      padding-bottom: 32px;
+    }
+  }
+
+  &__product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $surface-1;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    @include onPhone {
+      height: 160px;
+    }
+
+    @include onTablet {
+      height: 128px;
+    }
+
+    @include onDesktop {
+      min-width: 752px;
+      height: 128px;
+    }
+  }
+
+  &__order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 206px;
+    border: 1px solid $elements;
+
+    @include onPhone {
+      margin-bottom: 64px;
+    }
+
+    @include onTablet {
+      margin-bottom: 64px;
+    }
+
+    @include onDesktop {
+      width: 368px;
+    }
+  }
+}
