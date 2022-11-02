@@ -13,8 +13,8 @@
   }
 
   &__title {
-    font-family: "Mont", sans-serif;
-    color: #F1F2F9;
+    font-family: 'Mont', sans-serif;
+    color: #f1f2f9;
     font-weight: 600;
     text-align: left;
     font-size: 14px;
@@ -23,12 +23,12 @@
   }
 
   &__price {
-    color: #F1F2F9;
+    color: #f1f2f9;
     font-weight: 800;
     text-align: left;
     padding-top: 8px;
     padding-bottom: 8px;
-    border-bottom: solid #3B3E4A 1px;
+    border-bottom: solid #3b3e4a 1px;
   }
 }
 
@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  color: #75767F;
+  color: #75767f;
   //border-top: solid #3B3E4A 1px;
   margin-top: 16px;
 
@@ -47,7 +47,7 @@
   }
 
   &__value {
-    color: #F1F2F9;
+    color: #f1f2f9;
   }
 }
 
@@ -57,8 +57,8 @@
   margin-top: 16px;
 
   &__addToCart {
-    background-color: #905BFF;
-    color: #F1F2F9;
+    background-color: #905bff;
+    color: #f1f2f9;
     border-top: solid transparent 1px;
     padding: 10px 47px;
     margin-right: 8px;
@@ -67,12 +67,11 @@
   &__addToFavourites {
     padding: 10px 15px 10px 15px;
     background-color: #323542;
-    color: #F1F2F9;
+    color: #f1f2f9;
     border: solid transparent 1px;
-  
+
     &:hover {
-      background-color: #4A4D58;
+      background-color: #4a4d58;
     }
   }
 }
-
