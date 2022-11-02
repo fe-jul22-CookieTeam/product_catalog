@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Header } from './components/Header';
-import './styles/App.scss';
+import './App.scss';
 
 const App = () => {
   return (
@@ -10,7 +10,6 @@ const App = () => {
       <div className="main">
         <Outlet />
       </div>
-      
     </>
   );
 };
