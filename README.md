@@ -26,4 +26,4 @@
  - `git push origin <name of your branch/feature>`
  
  ## In case of errors
- - If you encounter errors in your terminal you can use `git status` to clarify the problem
+ - If you encounter errors in your terminal you can use `git status` to help clarify the problem
