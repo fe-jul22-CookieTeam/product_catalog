@@ -1,26 +1,42 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../routes/routes';
-import './CartPage.scss';
+import cart from './CartPage.module.scss';
+import '../../styles/blocks/grid.scss';
+import classNames from 'classnames';
 
 export const CartPage = () => (
-  <div className="cart">
-    <div className="cart__nav">
-      <div className="cart__nav-arrow"></div>
-      <Link to={ROUTES.home} className="cart__nav-link">
+  <div>
+    <div className={cart.nav}>
+      <div className={cart.nav__arrow}></div>
+      <Link to={ROUTES.home} className={cart.nav__link}>
         Back
       </Link>
     </div>
 
-    <div className="cart__title">Cart</div>
+    <div className={cart.title}>Cart</div>
 
-    <div className="cart__content grid">
-      <div className="cart__products grid__item--desktop-1-16">
-        <div className="cart__product">product</div>
-        <div className="cart__product">product</div>
-        <div className="cart__product">product</div>
+    <div className={classNames(cart.content, 'grid')}>
+      <div
+        className={classNames(
+          cart.products,
+          'grid__item--desktop-1-16',
+          'grid__item--tablet-1-12',
+        )}
+      >
+        <div className={cart.product}>product</div>
+        <div className={cart.product}>product</div>
+        <div className={cart.product}>product</div>
       </div>
 
-      <div className="cart__order grid__item--desktop-17-24">order</div>
+      <div
+        className={classNames(
+          cart.order,
+          'grid__item--desktop-17-24',
+          'grid__item--tablet-1-12',
+        )}
+      >
+        order
+      </div>
     </div>
   </div>
 );
