@@ -10,41 +10,38 @@
   margin: 0 auto;
 }
 
-
 .card {
   display: inline-block;
   box-sizing: border-box;
   height: 440px;
   min-width: 229px;
   background-color: aqua;
-  border:1px solid #000;
+  border: 1px solid #000;
   color: #000;
   font-size: 32px;
 }
 
 .menuRout {
-  
   display: flex;
   align-items: center;
   margin-top: 24px;
   margin-bottom: 40px;
 
-    &__home {
-      height: 16px;
-      width: 16px;
-    }
-    &__arrow {
-      height: 16px;
-      width: 16px;
-    }
-    &__title {
-      font-weight: 600;
-      font-size: 12px;
-      padding-top: 2px;
-      color: $secondary;
-    }
+  &__home {
+    height: 16px;
+    width: 16px;
+  }
+  &__arrow {
+    height: 16px;
+    width: 16px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 12px;
+    padding-top: 2px;
+    color: $secondary;
+  }
 
-  
   // padding-left: 16px;
   // margin-bottom: 22px;
 
@@ -62,7 +59,6 @@
 // }
 
 .pagePhone {
-  
   &__title {
     font-weight: 800;
     font-size: 32px;
@@ -88,4 +84,3 @@
     }
   }
 }
-

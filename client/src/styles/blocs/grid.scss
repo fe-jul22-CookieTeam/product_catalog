@@ -25,58 +25,56 @@ $grid__cols--md: 24;
   }
   @include onDesktop {
     grid-template-columns: repeat(24, 1fr);
-    
   }
 
   &__container {
-      column-gap: 16px;
-      // max-width: $grid__bp--md * 1px;
-      margin: 0 auto;
+    column-gap: 16px;
+    // max-width: $grid__bp--md * 1px;
+    margin: 0 auto;
 
-      &__row {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
+    &__row {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    @for $i from 1 through $grid__cols--sm {
+      &__col-sm-#{$i} {
+        flex-basis: (100 / ($grid__cols--sm / $i)) * 1%;
       }
-      @for $i from 1 through $grid__cols--sm {
-        &__col-sm-#{$i} {
-          flex-basis: (100 / ($grid__cols--sm  / $i) ) * 1%;
-        }
-      }
-      @media screen and (min-width: ($grid__bp--md * 1px)) {
-        @for $i from 1 through $grid__cols--md  {
-          &__col-md-#{$i} {
-            flex-basis: (100 / ($grid__cols--md  / $i) ) * 1%;
-          }
+    }
+    @media screen and (min-width: ($grid__bp--md * 1px)) {
+      @for $i from 1 through $grid__cols--md {
+        &__col-md-#{$i} {
+          flex-basis: (100 / ($grid__cols--md / $i)) * 1%;
         }
       }
     }
-    
-    //Styling of grid for demostration purposes
-    // .container {
-    //   background-color: #88d8b0;
-    //   padding: 10px;
-    //   box-sizing: border-box;
-    //   &__row {
-    //     background-color: #ffeead;
-    //   }
-      // @at-root {
-      //   [class*='container__col-'] {
-      //     width: 150px;
-      //     height: 30px;
-      //     background-color: #ff6f69;
-      //     outline: 1px solid #ffcc5c;
-      //     margin: 10px 0;
-      //     display: flex;
-      //     align-items: center;
-      //     justify-content: space-around;
-      //   }
-      // }
-    
+  }
+
+  //Styling of grid for demostration purposes
+  // .container {
+  //   background-color: #88d8b0;
+  //   padding: 10px;
+  //   box-sizing: border-box;
+  //   &__row {
+  //     background-color: #ffeead;
+  //   }
+  // @at-root {
+  //   [class*='container__col-'] {
+  //     width: 150px;
+  //     height: 30px;
+  //     background-color: #ff6f69;
+  //     outline: 1px solid #ffcc5c;
+  //     margin: 10px 0;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: space-around;
+  //   }
+  // }
+
   // }
 
   &__item {
-
     @for $start from 1 through 4 {
       @for $end from $start through 4 {
         &--onPhone--#{$start}-#{$end} {
