@@ -3,11 +3,10 @@ import './CartPage.scss';
 
 export const CartPage = () => (
   <div className="cart">
-
     <div className="cart__nav">
       <div className="cart__nav-arrow"></div>
       <Link to="/" className="cart__nav-link">
-          Back
+        Back
       </Link>
     </div>
 
@@ -23,5 +22,4 @@ export const CartPage = () => (
       <div className="cart__order grid__item--desktop-17-24">order</div>
     </div>
   </div>
-
 );
