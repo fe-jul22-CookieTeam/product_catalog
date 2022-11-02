@@ -1,0 +1,140 @@
+@import '../../styles/utils/mixins';
+@import '../../styles/utils/vars';
+
+.container {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 1136px;
+
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.card {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 440px;
+  min-width: 287px;
+  background-color: aqua;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 32px;
+}
+
+.pagePhone {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: -0.01em;
+    margin-bottom: 22px;
+
+    @include onTablet {
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+
+  &__count {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: $secondary;
+    margin-bottom: 22px;
+
+    @include onTablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__sorter {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  &__sort-by {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__sort-by-title {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: $secondary;
+  }
+
+  &__sort-by-select {
+    width: 187px;
+    height: 40px;
+    color: $white;
+    background: $secondary;
+
+    border: 1px solid #b4bdc4;
+  }
+
+  &__items-on-page {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    margin-right: 16px;
+  }
+
+  &__catalog {
+    @include onPhone {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+
+      gap: 40px 16px;
+    }
+
+    @include onTablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 16px;
+    }
+
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 60px 16px;
+    }
+  }
+}
+
+.menuRout {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-top: 24px;
+  margin-top: 16px;
+  margin-bottom: 40px;
+
+  &__home {
+    height: 16px;
+    width: 16px;
+  }
+  &__arrow {
+    height: 16px;
+    width: 16px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: $secondary;
+  }
+
+  @include onTablet {
+    margin-bottom: 40px;
+  }
+}
