@@ -1,0 +1,130 @@
+@import '../../styles/main.scss';
+
+.footer {
+  display: flex;
+  flex: 0 0 auto;
+  border-top: 1px solid $secondary;
+  justify-content: space-between;
+
+  padding: 32px 32px;
+
+  @include onPhone {
+    flex-direction: column;
+    padding: 32px 16px;
+  }
+
+  @include onTablet {
+    height: 96px;
+    align-items: center;
+  }
+}
+
+.logo {
+  display: flex;
+  background-image: url(../../images/logo.svg);
+  height: 32px;
+  width: 88px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include onPhone {
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    height: 32px;
+    width: 88px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  @include onPhone {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $white;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include onTablet {
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    @include onDesktop {
+      &:not(:last-child) {
+        margin-right: 106px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    @include onPhone {
+      &:not(:last-child) {
+        padding-bottom: 16px;
+      }
+    }
+  }
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    color: $secondary;
+    padding-right: 16px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__button {
+    display: flex;
+    background-image: url(../../images/button-back.svg);
+    height: 32px;
+    width: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+
+    &:hover {
+      background-image: url(../../images/button-back--hover.svg);
+    }
+  }
+
+  &__link {
+    width: 32px;
+    height: 32px;
+  }
+}
