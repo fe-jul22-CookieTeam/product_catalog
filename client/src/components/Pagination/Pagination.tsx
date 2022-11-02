@@ -1,8 +1,6 @@
 import classNames from 'classnames';
 import '../Pagination/Pagination.scss';
 
-
-
 type Props = {
   total: number;
   perPage: number;
@@ -16,7 +14,7 @@ export const Pagination: React.FC<Props> = ({
   perPage,
   currentPage,
   onPageChange,
-  getNumbers
+  getNumbers,
 }) => {
   const totalPages = Math.ceil(total / perPage);
 
@@ -25,9 +23,7 @@ export const Pagination: React.FC<Props> = ({
 
     const nextPage = +(event.currentTarget.dataset.page || 0);
 
-    if (
-      nextPage === currentPage || nextPage < 1 || nextPage > totalPages
-    ) {
+    if (nextPage === currentPage || nextPage < 1 || nextPage > totalPages) {
       return;
     }
 
@@ -37,13 +33,9 @@ export const Pagination: React.FC<Props> = ({
   return (
     <ul className="pagination">
       <li
-        className={classNames(
-          'page-item',
-          {
-            disabled: currentPage === 1,
-          },
-        )}
-
+        className={classNames('page-item', {
+          disabled: currentPage === 1,
+        })}
       >
         <a
           data-cy="prevLink"
@@ -53,40 +45,31 @@ export const Pagination: React.FC<Props> = ({
           data-page={currentPage - 1}
           onClick={handlePageItemClick}
         >
-          &lt;	
+          &lt;
         </a>
       </li>
-      {
-        getNumbers(1, totalPages)
-          .map(page => (
-            <li
-              key={page}
-              className={classNames(
-                'page-item',
-                {
-                  active: page === currentPage,
-                },
-              )}
-            >
-              <a
-                data-cy="pageLink"
-                className="page-link"
-                href={`#${page}`}
-                data-page={page}
-                onClick={handlePageItemClick}
-              >
-                {page}
-              </a>
-            </li>
-          ))
-      }
+      {getNumbers(1, totalPages).map((page) => (
+        <li
+          key={page}
+          className={classNames('page-item', {
+            active: page === currentPage,
+          })}
+        >
+          <a
+            data-cy="pageLink"
+            className="page-link"
+            href={`#${page}`}
+            data-page={page}
+            onClick={handlePageItemClick}
+          >
+            {page}
+          </a>
+        </li>
+      ))}
       <li
-        className={classNames(
-          'page-item',
-          {
-            disabled: currentPage === totalPages,
-          },
-        )}
+        className={classNames('page-item', {
+          disabled: currentPage === totalPages,
+        })}
       >
         <a
           data-cy="nextLink"
@@ -102,7 +85,3 @@ export const Pagination: React.FC<Props> = ({
     </ul>
   );
 };
-
-
-
-

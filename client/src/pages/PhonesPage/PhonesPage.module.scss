@@ -21,7 +21,6 @@
   font-size: 32px;
 }
 
-
 .pagePhone {
   display: flex;
   flex-direction: column;
@@ -54,58 +53,53 @@
 
   &__sorter {
     display: flex;
-    align-items:flex-start;
+    align-items: flex-start;
     gap: 16px;
   }
-  
+
   &__sort-by {
     display: flex;
     flex-direction: column;
     gap: 4px;
-
   }
-  
+
   &__sort-by-title {
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
-  
+
     color: $secondary;
   }
-  
+
   &__sort-by-select {
-    
     width: 187px;
     height: 40px;
     color: $white;
     background: $secondary;
-  
-    border: 1px solid #B4BDC4;
+
+    border: 1px solid #b4bdc4;
   }
-  
+
   &__items-on-page {
     display: flex;
     flex-direction: column;
     gap: 4px;
-  
+
     margin-right: 16px;
   }
 
   &__catalog {
-    
-      @include onPhone {
+    @include onPhone {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
 
       gap: 40px 16px;
-      }
+    }
 
-    
     @include onTablet {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 40px 16px;
-
     }
 
     @include onDesktop {
@@ -118,7 +112,7 @@
 
 .menuRout {
   display: flex;
-  align-items:center;
+  align-items: center;
   gap: 15px;
 
   margin-top: 24px;
@@ -139,7 +133,6 @@
     line-height: 15px;
     color: $secondary;
   }
-
 
   @include onTablet {
     margin-bottom: 40px;
