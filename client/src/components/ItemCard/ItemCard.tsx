@@ -36,7 +36,7 @@ export const ItemCard = () => {
 
       <div className="buttons">
         <div className="buttons__addToCart">Add to cart</div>
-        <div className="buttons__addToFavourites">♥</div>
+        <div className="buttons__addToFavourites"></div>
       </div>
     </div>
   );

@@ -1,9 +1,11 @@
+@import "../../styles/utils/vars";
+
 .item {
   box-sizing: border-box;
   margin: 17px;
   text-align: center;
-  background-color: #161827;
-  max-width: 287px;
+  background-color: $surface-1;
+  max-width: 320px;
   padding: 32px;
 
   &__image {
@@ -13,8 +15,8 @@
   }
 
   &__title {
-    font-family: 'Mont', sans-serif;
-    color: #f1f2f9;
+    font-family: 'Mont';
+    color: $white;
     font-weight: 600;
     text-align: left;
     font-size: 14px;
@@ -23,12 +25,12 @@
   }
 
   &__price {
-    color: #f1f2f9;
+    color: $white;
     font-weight: 800;
     text-align: left;
     padding-top: 8px;
     padding-bottom: 8px;
-    border-bottom: solid #3b3e4a 1px;
+    border-bottom: solid $elements 1px;
   }
 }
 
@@ -36,8 +38,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  color: #75767f;
-  //border-top: solid #3B3E4A 1px;
+  color: $secondary;
   margin-top: 16px;
 
   &__wrapper {
@@ -47,7 +48,7 @@
   }
 
   &__value {
-    color: #f1f2f9;
+    color: $white;
   }
 }
 
@@ -57,21 +58,40 @@
   margin-top: 16px;
 
   &__addToCart {
-    background-color: #905bff;
-    color: #f1f2f9;
+    height: 40px;
+    white-space: nowrap;
+    background-color: $accent-1;
+    color: $white;
     border-top: solid transparent 1px;
     padding: 10px 47px;
     margin-right: 8px;
+
+    &:hover {
+      background-color: $accent-1;
+    }
+
+    &:focus {
+      background-color: $surface-2;
+    }
   }
 
   &__addToFavourites {
+    height: 40px;
+    width: 50px;
     padding: 10px 15px 10px 15px;
-    background-color: #323542;
-    color: #f1f2f9;
+    background-color: $surface-2;
+    color: $white;
     border: solid transparent 1px;
+    background-image: url(../../images/favourites.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 
     &:hover {
-      background-color: #4a4d58;
+      background-color: $icons;
+    }
+
+    &:focus {
+      background-color: $surface-1;
     }
   }
 }
