@@ -31,10 +31,6 @@ export const BurgerMenu = () => {
           </Link>
         </div>
       </div>
-      <div className="burger__menu--bottom">
-        <button className="burger__menu--bottom-favourites"></button>
-        <button className="burger__menu--bottom-basket"></button>
-      </div>
     </div>
   );
 };
