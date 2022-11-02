@@ -1,13 +1,9 @@
 import { Outlet } from 'react-router-dom';
 import { Header } from './components/Header';
-import './App.scss';
-<<<<<<< HEAD
-//import { CatalogPage } from './pages/CatalogPage';
-=======
 import { ItemCard } from './components/ItemCard';
 import { BurgerMenu } from './components/BurgerMenuPage/BurgerMenu';
-import { CatalogPage } from './pages/CatalogPage';
->>>>>>> 79f46c86bef952c908a6042f762a861464f81bdd
+import './App.scss';
+//import { CatalogPage } from './pages/CatalogPage';
 import { HomePage } from './pages/HomePage';
 
 const App = () => {
