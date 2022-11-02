@@ -1,9 +1,10 @@
 import express from "express";
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 var app = express();
 app.get("/test", function(req, res) {
-    res.status(200).send("Hello World");
+    res.status(200).send("Hello World ");
 });
 app.listen(PORT, function() {
+    // eslint-disable-next-line no-console
     console.log("Server running on port ".concat(PORT));
 });
