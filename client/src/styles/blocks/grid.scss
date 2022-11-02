@@ -1,51 +1,39 @@
+@import '../utils/mixins';
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   column-gap: 16px;
-  // если мы не используем грид для мобильной версии, а востальных используем, то для этого модификатор desktop
-  &--desktop {
-    display: block;
-    @include onTablet {
-      display: grid;
-    }
-    @include onDesKtop {
-      display: grid;
-    }
-  }
 
   @include onTablet {
     grid-template-columns: repeat(12, 1fr);
-    column-gap: 16px;
   }
-  @include onDesKtop {
+
+  @include onDesktop {
     grid-template-columns: repeat(24, 1fr);
-    column-gap: 16px;
   }
 
-  &__item {
-    @for $start from 1 through 12 {
-      @for $end from $start through 12 {
-        &--onTablet--#{$start}-#{$end} {
-          @include onTablet {
-            grid-column: #{$start} / #{$end + 1};
-          }
-        }
-      }
-    }
-
-    @for $start from 1 through 24 {
-      @for $end from $start through 24 {
-        &--onDesKtop--#{$start}-#{$end} {
-          @include onDesKtop {
+  &__item--tablet {
+    @include onTablet {
+      @for $start from 1 through 12 {
+        @for $end from $start through 12 {
+          &-#{$start}-#{$end} {
             grid-column: #{$start} / #{$end + 1};
           }
         }
       }
     }
   }
-  /** при использовании в классах 
-class=" grid__item
-        grid__item--onTablet--1-4      -указываем какие колонки занимает
-        grid__item--onDesKtop--1-8"
-**/
+
+  &__item--desktop {
+    @include onDesktop {
+      @for $start from 1 through 24 {
+        @for $end from $start through 24 {
+          &-#{$start}-#{$end} {
+            grid-column: #{$start} / #{$end + 1};
+          }
+        }
+      }
+    }
+  }
 }
