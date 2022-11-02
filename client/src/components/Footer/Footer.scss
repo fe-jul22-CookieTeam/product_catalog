@@ -52,16 +52,21 @@
       letter-spacing: 0.04em;
       text-transform: uppercase;
       color: $white;
+      transition: all 0.3s;
 
       @include onTablet {
         &:not(:last-child) {
-          padding-right: 16px;
+          margin-right: 16px;
+        }
+
+        &:hover {
+          transform: scale(1.1);
         }
       }
 
       @include onDesktop {
         &:not(:last-child) {
-          padding-right: 106px;
+          margin-right: 106px;
         }
       }
 
@@ -86,10 +91,28 @@
       text-align: right;
       color: $secondary;
       padding-right: 16px;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $white;
+      }
     }
 
     &-button {
-      background-image: url('../../images/button-back.svg');
+      display: flex;
+      background-image: url(../../images/button-back.svg);
+      height: 32px;
+      width: 32px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: all 0.3s;
+
+      &:hover {
+        background-image: url(../../images/button-back--hover.svg);
+      }
+    }
+
+    &-link {
       width: 32px;
       height: 32px;
     }

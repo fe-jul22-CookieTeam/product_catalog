@@ -8,7 +8,7 @@ export const HeaderRight = () => (
       end={false}
       className={({ isActive }) =>
         classNames('header__right-favourites header__right-link', {
-          'header__right-favourites-active': isActive,
+          'header__right-favourites--active': isActive,
         })
       }
     />
@@ -18,7 +18,7 @@ export const HeaderRight = () => (
       end={true}
       className={({ isActive }) =>
         classNames('header__right-cart header__right-link', {
-          'header__right-cart-active': isActive,
+          'header__right-cart--active': isActive,
         })
       }
     />
