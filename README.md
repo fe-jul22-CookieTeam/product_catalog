@@ -15,12 +15,15 @@
  
  
  # Useful git commands:
- - 'npm install' (or simply 'npm i')
- - 'git checkout main'
- - 'git pull origin main'
- - 'git rebase main'
- - 'git checkout <name of your branch/feature>'
- - 'npm start'
- - 'git add .'
- - 'git commit -m <description>'
- - 'git push origin <name of your branch/feature>'
+ - `npm install` (or simply `npm i`)
+ - `git checkout main`
+ - `git pull origin main`
+ - `git rebase main`
+ - `git checkout <name of your branch/feature>`
+ - `npm start`
+ - `git add .`
+ - `git commit -m <description>`
+ - `git push origin <name of your branch/feature>`
+ 
+ ## In case of errors
+ - If you encounter errors in your terminal you can use `git status` to clarify the problem
