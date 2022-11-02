@@ -30,7 +30,6 @@ $grid__cols--md: 24;
     gap: 40px 16px;
   }
 
-
   &__item {
     @for $start from 1 through 4 {
       @for $end from $start through 4 {
