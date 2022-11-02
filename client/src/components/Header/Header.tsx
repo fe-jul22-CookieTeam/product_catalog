@@ -1,6 +1,6 @@
 import './Header.scss';
-import { HeaderLeft } from './HeaderLeft/HeaderLeft';
-import { HeaderRight } from './HeaderRight/HeaderRight';
+import { HeaderLeft } from './HeaderLeft';
+import { HeaderRight } from './HeaderRight';
 
 export const Header = () => (
   <header className="header">

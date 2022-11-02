@@ -4,6 +4,10 @@
   display: flex;
   justify-content: space-between;
   box-shadow: 0 1px 0 $secondary;
+  position: sticky;
+  top: 0;
+  background-color: $black;
+  margin-bottom: 25px;
 
   &__left {
     display: flex;
@@ -53,6 +57,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    transition: all 0.3s;
 
     @include onTablet {
       margin-right: 32px;
@@ -97,13 +102,23 @@
     background-repeat: no-repeat;
 
     @include onTablet {
-      padding-right: 32px;
+      margin-right: 32px;
     }
 
     @include onDesktop {
-      padding-right: 64px;
+      margin-right: 64px;
       height: 26px;
       width: 80px;
+    }
+
+    &-link {
+      height: 22px;
+      width: 60px;
+
+      @include onDesktop {
+        height: 26px;
+        width: 80px;
+      }
     }
   }
 
@@ -112,10 +127,6 @@
     justify-content: flex-end;
     align-items: center;
     flex-grow: 1;
-
-    @include onPhone {
-      display: none;
-    }
 
     &-link {
       justify-content: center;
@@ -134,24 +145,79 @@
       background-image: url(../../images/favourites.svg);
       background-position: center;
       background-repeat: no-repeat;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #181c34;
+      }
+
+      @include onPhone {
+        display: none;
+      }
+
+      &--active::after {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        height: 3px;
+        width: 48px;
+        content: '';
+        background-color: $white;
+        border-radius: 8px;
+
+        @include onDesktop {
+          width: 64px;
+        }
+      }
     }
 
     &-cart {
       background-image: url(../../images/cart.svg);
       background-position: center;
       background-repeat: no-repeat;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #181c34;
+      }
+
+      @include onPhone {
+        display: none;
+      }
+
+      &--active::after {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        height: 3px;
+        width: 48px;
+        content: '';
+        background-color: $white;
+        border-radius: 8px;
+
+        @include onDesktop {
+          width: 64px;
+        }
+      }
     }
-  }
-}
 
-.logo {
-  &__link {
-    height: 22px;
-    width: 60px;
+    &-menu {
+      background-image: url(../../images/menu.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: all 0.3s;
 
-    @include onDesktop {
-      height: 26px;
-      width: 80px;
+      &:hover {
+        background-color: #181c34;
+      }
+
+      @include onTablet {
+        display: none;
+      }
+
+      @include onDesktop {
+        display: none;
+      }
     }
   }
 }
