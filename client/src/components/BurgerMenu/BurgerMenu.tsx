@@ -6,11 +6,8 @@ export const BurgerMenu = () => {
   return (
     <div className="burger__menu">
       <div className="burger__menu--top">
-        <Link to={ROUTES.home}
-          className="burger__menu--top-logo"
-        />
+        <Link to={ROUTES.home} className="burger__menu--top-logo" />
         <Link to={ROUTES.home} className="burger__menu--top-close" />
-
       </div>
       <div className="burger__menu--main">
         <div>

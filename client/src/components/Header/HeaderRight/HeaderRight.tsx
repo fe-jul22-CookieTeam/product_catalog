@@ -24,6 +24,9 @@ export const HeaderRight = () => (
       }
     />
 
-    <NavLink to={ROUTES.menu} className="header__right-menu header__right-link" />
+    <NavLink
+      to={ROUTES.menu}
+      className="header__right-menu header__right-link"
+    />
   </div>
 );
