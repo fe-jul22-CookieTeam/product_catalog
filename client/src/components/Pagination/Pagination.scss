@@ -1,0 +1,32 @@
+@import '../../styles/utils/vars';
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  list-style: none;
+}
+
+.page-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  height: 32px;
+
+  background: $secondary;
+  border: 1px solid $secondary;
+}
+
+.page-link {
+  font-family: 'Mont';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+
+  color: $white;;
+}

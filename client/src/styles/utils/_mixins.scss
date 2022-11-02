@@ -3,20 +3,12 @@
     @content;
   }
 }
-
 @mixin onTablet {
-  @media (min-width: 640px) {
+  @media (min-width: 640px) and (max-width: 1199px) {
     @content;
   }
 }
-
 @mixin onDesktop {
-  @media (min-width: 1200px) {
-    @content;
-  }
-}
-
-@mixin onDesktopBig {
   @media (min-width: 1200px) {
     @content;
   }

@@ -8,8 +8,8 @@ $grid__cols--md: 24;
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 40px 16px;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px 16px;
   &--desktop {
     display: block;
     @include onTablet {
@@ -21,58 +21,38 @@ $grid__cols--md: 24;
   }
 
   @include onTablet {
-    grid-template-columns: repeat(12, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 16px;
   }
   @include onDesktop {
-    grid-template-columns: repeat(24, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 16px;
   }
 
-  &__container {
-    column-gap: 16px;
-    // max-width: $grid__bp--md * 1px;
-    margin: 0 auto;
+  // &__container {
+  //   column-gap: 16px;
+  //   margin: 0 auto;
 
-    &__row {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-    }
-    @for $i from 1 through $grid__cols--sm {
-      &__col-sm-#{$i} {
-        flex-basis: (100 / ($grid__cols--sm / $i)) * 1%;
-      }
-    }
-    @media screen and (min-width: ($grid__bp--md * 1px)) {
-      @for $i from 1 through $grid__cols--md {
-        &__col-md-#{$i} {
-          flex-basis: (100 / ($grid__cols--md / $i)) * 1%;
-        }
-      }
-    }
-  }
-
-  //Styling of grid for demostration purposes
-  // .container {
-  //   background-color: #88d8b0;
-  //   padding: 10px;
-  //   box-sizing: border-box;
   //   &__row {
-  //     background-color: #ffeead;
-  //   }
-  // @at-root {
-  //   [class*='container__col-'] {
-  //     width: 150px;
-  //     height: 30px;
-  //     background-color: #ff6f69;
-  //     outline: 1px solid #ffcc5c;
-  //     margin: 10px 0;
   //     display: flex;
-  //     align-items: center;
-  //     justify-content: space-around;
+  //     flex-wrap: wrap;
+  //     width: 100%;
+  //   }
+  //   @for $i from 1 through $grid__cols--sm {
+  //     &__col-sm-#{$i} {
+  //       flex-basis: (100 / ($grid__cols--sm / $i)) * 1%;
+  //     }
+  //   }
+  //   @media screen and (min-width: ($grid__bp--md * 1px)) {
+  //     @for $i from 1 through $grid__cols--md {
+  //       &__col-md-#{$i} {
+  //         flex-basis: (100 / ($grid__cols--md / $i)) * 1%;
+  //       }
+  //     }
   //   }
   // }
 
-  // }
 
   &__item {
     @for $start from 1 through 4 {
