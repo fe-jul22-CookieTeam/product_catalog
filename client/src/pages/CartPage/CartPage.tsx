@@ -1,3 +1,7 @@
-import './CartPage.module.scss';
+import './CartPage.scss';
 
-export const CartPage = () => <h1>Cart Page</h1>;
+export const CartPage = () => (
+  <div className="container">
+    <h1>Cart Page</h1>
+  </div>
+);
