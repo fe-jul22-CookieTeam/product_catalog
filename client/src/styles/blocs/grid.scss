@@ -1,28 +1,92 @@
+@import '../utils/mixins';
+
+$grid__bp--sm: 639;
+$grid__bp--md: 1199;
+
+$grid__cols--sm: 12;
+$grid__cols--md: 24;
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 16px;
-  // если мы не используем грид для мобильной версии, а востальных используем, то для этого модификатор desktop
+  column-gap: 40px 16px;
   &--desktop {
     display: block;
     @include onTablet {
       display: grid;
     }
-    @include onDesKtop {
+    @include onDesktop {
       display: grid;
     }
   }
 
   @include onTablet {
     grid-template-columns: repeat(12, 1fr);
-    column-gap: 16px;
   }
-  @include onDesKtop {
+  @include onDesktop {
     grid-template-columns: repeat(24, 1fr);
-    column-gap: 16px;
+    
   }
 
+  &__container {
+      column-gap: 16px;
+      // max-width: $grid__bp--md * 1px;
+      margin: 0 auto;
+
+      &__row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      @for $i from 1 through $grid__cols--sm {
+        &__col-sm-#{$i} {
+          flex-basis: (100 / ($grid__cols--sm  / $i) ) * 1%;
+        }
+      }
+      @media screen and (min-width: ($grid__bp--md * 1px)) {
+        @for $i from 1 through $grid__cols--md  {
+          &__col-md-#{$i} {
+            flex-basis: (100 / ($grid__cols--md  / $i) ) * 1%;
+          }
+        }
+      }
+    }
+    
+    //Styling of grid for demostration purposes
+    // .container {
+    //   background-color: #88d8b0;
+    //   padding: 10px;
+    //   box-sizing: border-box;
+    //   &__row {
+    //     background-color: #ffeead;
+    //   }
+      // @at-root {
+      //   [class*='container__col-'] {
+      //     width: 150px;
+      //     height: 30px;
+      //     background-color: #ff6f69;
+      //     outline: 1px solid #ffcc5c;
+      //     margin: 10px 0;
+      //     display: flex;
+      //     align-items: center;
+      //     justify-content: space-around;
+      //   }
+      // }
+    
+  // }
+
   &__item {
+
+    @for $start from 1 through 4 {
+      @for $end from $start through 4 {
+        &--onPhone--#{$start}-#{$end} {
+          @include onPhone {
+            grid-column: #{$start} / #{$end + 1};
+          }
+        }
+      }
+    }
+
     @for $start from 1 through 12 {
       @for $end from $start through 12 {
         &--onTablet--#{$start}-#{$end} {
@@ -35,17 +99,12 @@
 
     @for $start from 1 through 24 {
       @for $end from $start through 24 {
-        &--onDesKtop--#{$start}-#{$end} {
-          @include onDesKtop {
+        &--onDesktop--#{$start}-#{$end} {
+          @include onDesktop {
             grid-column: #{$start} / #{$end + 1};
           }
         }
       }
     }
   }
-  /** при использовании в классах 
-class=" grid__item
-        grid__item--onTablet--1-4      -указываем какие колонки занимает
-        grid__item--onDesKtop--1-8"
-**/
 }

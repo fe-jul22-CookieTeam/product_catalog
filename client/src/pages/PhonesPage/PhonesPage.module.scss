@@ -1,0 +1,91 @@
+@import '../../styles/utils/mixins';
+@import '../../styles/utils/vars';
+
+.container {
+  display: block;
+  box-sizing: border-box;
+  max-width: 1136px;
+
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+.card {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 440px;
+  min-width: 229px;
+  background-color: aqua;
+  border:1px solid #000;
+  color: #000;
+  font-size: 32px;
+}
+
+.menuRout {
+  
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 40px;
+
+    &__home {
+      height: 16px;
+      width: 16px;
+    }
+    &__arrow {
+      height: 16px;
+      width: 16px;
+    }
+    &__title {
+      font-weight: 600;
+      font-size: 12px;
+      padding-top: 2px;
+      color: $secondary;
+    }
+
+  
+  // padding-left: 16px;
+  // margin-bottom: 22px;
+
+  @include onTablet {
+    margin-bottom: 40px;
+  }
+}
+// .logo__home {
+//   display: flex;
+//   background-image: url(../../images/Home.svg);
+//   height: 22px;
+//   width: 60px;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+// }
+
+.pagePhone {
+  
+  &__title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: -0.01em;
+    margin-bottom: 22px;
+
+    @include onTablet {
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+
+  &__count {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: $secondary;
+    margin-bottom: 22px;
+
+    @include onTablet {
+      margin-bottom: 40px;
+    }
+  }
+}
+
