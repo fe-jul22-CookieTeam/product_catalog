@@ -3,13 +3,13 @@
   text-align: center;
   height: 100vh;
   max-width: 639px;
-  background-color: #2A2932;
+  background-color: #2a2932;
   position: relative;
 
   &--top {
     display: flex;
     justify-content: space-between;
-    border: solid #3B3E4A 1px;
+    border: solid #3b3e4a 1px;
   }
 
   &--top-logo {
@@ -19,8 +19,8 @@
   &--top-close {
     padding: 17px;
     text-decoration: none;
-    color: #F1F2F9;
-    border-left: solid #3B3E4A 1px;
+    color: #f1f2f9;
+    border-left: solid #3b3e4a 1px;
   }
 
   &--main {
@@ -32,12 +32,12 @@
 
   &--link {
     text-decoration: none;
-    color: #75767F;
+    color: #75767f;
     text-transform: uppercase;
 
     &:hover {
-      color: #F1F2F9;
-      border-bottom: solid #F1F2F9 3px;
+      color: #f1f2f9;
+      border-bottom: solid #f1f2f9 3px;
     }
   }
 
@@ -50,15 +50,15 @@
   }
 
   &--bottom-favourites {
-    border: solid #F1F2F9 1px;
-    background-color: #2A2932;
+    border: solid #f1f2f9 1px;
+    background-color: #2a2932;
     padding: 25px 72px;
     width: 50%;
   }
 
   &--bottom-basket {
-    border: solid #F1F2F9 1px;
-    background-color: #2A2932;
+    border: solid #f1f2f9 1px;
+    background-color: #2a2932;
     padding: 25px 72px;
     width: 50%;
   }
