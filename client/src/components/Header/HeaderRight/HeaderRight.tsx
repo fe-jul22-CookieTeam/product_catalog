@@ -1,10 +1,11 @@
 import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
+import { ROUTES } from '../../../routes';
 
 export const HeaderRight = () => (
   <div className="header__right">
     <NavLink
-      to="favourites"
+      to={ROUTES.favourites}
       end={false}
       className={({ isActive }) =>
         classNames('header__right-favourites header__right-link', {
@@ -14,7 +15,7 @@ export const HeaderRight = () => (
     />
 
     <NavLink
-      to="cart"
+      to={ROUTES.cart}
       end={true}
       className={({ isActive }) =>
         classNames('header__right-cart header__right-link', {
@@ -23,6 +24,6 @@ export const HeaderRight = () => (
       }
     />
 
-    <NavLink to="/" className="header__right-menu header__right-link" />
+    <NavLink to={ROUTES.menu} className="header__right-menu header__right-link" />
   </div>
 );

@@ -13,6 +13,7 @@ import { HomePage } from './pages/HomePage';
 import { PageNotFound } from './pages/PageNotFound';
 import { PhonesPage } from './pages/PhonesPage';
 import { TabletsPage } from './pages/TabletsPage';
+import { ROUTES } from './routes/routes';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -21,16 +22,16 @@ const root = ReactDOM.createRoot(
 root.render(
   <Router>
     <Routes>
-      <Route path="/" element={<App />}>
-        <Route path="phones">
+      <Route path={ROUTES.home} element={<App />}>
+        <Route path={ROUTES.phones}>
           <Route index element={<PhonesPage />} />
           <Route path=":slug" element={<PhonesPage />} />
         </Route>
         <Route index element={<HomePage />} />
-        <Route path="tablets" element={<TabletsPage />} />
-        <Route path="accessories" element={<AccessoriesPage />} />
-        <Route path="favourites" element={<FavouritesPage />} />
-        <Route path="cart" element={<CartPage />} />
+        <Route path={ROUTES.tablets} element={<TabletsPage />} />
+        <Route path={ROUTES.accessories} element={<AccessoriesPage />} />
+        <Route path={ROUTES.favourites} element={<FavouritesPage />} />
+        <Route path={ROUTES.cart} element={<CartPage />} />
         <Route path="home" element={<Navigate to="/" replace />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
