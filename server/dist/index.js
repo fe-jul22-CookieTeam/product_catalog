@@ -3,6 +3,7 @@ import cors from "cors";
 import fs from "fs";
 var PORT = process.env.PORT || 3000;
 var app = express();
+
 app.use(cors());
 app.use(express.static("data"));
 app.use(express.json());
@@ -22,6 +23,10 @@ app.get("/products/:productId", function(req, res) {
 });
 app.get("/", function(req, res) {
     res.status(200).send("Hello World");
+
+app.get("/", function(req, res) {
+    res.status(200).send("Hello World 1234");
+
 });
 app.listen(PORT, function() {
     // eslint-disable-next-line no-console

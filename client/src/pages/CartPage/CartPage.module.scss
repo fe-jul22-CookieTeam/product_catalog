@@ -4,11 +4,22 @@
 
 .nav {
   display: flex;
-  align-items: baseline;
   padding-bottom: 16px;
 
   @include onPhone {
     padding-bottom: 24px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: baseline;
+    transition: all 0.3s;
+
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(39%) sepia(44%)
+        saturate(1549%) hue-rotate(228deg) brightness(101%) contrast(107%);
+      transform: scale(1.1);
+    }
   }
 
   &__arrow {
@@ -24,11 +35,6 @@
     font-size: 12px;
     line-height: 15px;
     color: $white;
-    transition: all 0.3s;
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 }
 
