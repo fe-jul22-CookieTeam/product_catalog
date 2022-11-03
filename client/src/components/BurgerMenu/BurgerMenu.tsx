@@ -32,7 +32,6 @@ export const BurgerMenu = () => {
           </Link>
         </div>
       </div>
-    </>
-    
+    </div>
   );
 };
