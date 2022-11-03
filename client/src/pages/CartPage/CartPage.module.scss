@@ -4,17 +4,21 @@
 
 .nav {
   display: flex;
-  align-items: baseline;
   padding-bottom: 16px;
-  transition: all 0.3s;
-
-  &:hover {
-    filter: brightness(0) saturate(100%) invert(39%) sepia(44%) saturate(1549%)
-      hue-rotate(228deg) brightness(101%) contrast(107%);
-  }
 
   @include onPhone {
     padding-bottom: 24px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: baseline;
+    transition: all 0.3s;
+
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(39%) sepia(44%)
+        saturate(1549%) hue-rotate(228deg) brightness(101%) contrast(107%);
+    }
   }
 
   &__arrow {

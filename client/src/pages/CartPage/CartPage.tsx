@@ -7,10 +7,12 @@ import classNames from 'classnames';
 export const CartPage = () => (
   <div>
     <div className={cart.nav}>
-      <div className={cart.nav__arrow}></div>
-      <Link to={ROUTES.home} className={cart.nav__link}>
-        Back
-      </Link>
+      <div className={cart.nav__content}>
+        <div className={cart.nav__arrow}></div>
+        <Link to={ROUTES.home} className={cart.nav__link}>
+          Back
+        </Link>
+      </div>
     </div>
 
     <div className={cart.title}>Cart</div>
