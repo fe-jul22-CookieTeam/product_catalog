@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import './App.scss';
 import './styles/blocks/container.scss';
 import { Footer } from './components/Footer';
+import { ItemCard } from './components/ItemCard';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <div className="main">
         <div className="container">
           <Outlet />
+          <ItemCard />
         </div>
       </div>
 
