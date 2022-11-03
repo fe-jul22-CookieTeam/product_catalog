@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
 import './BurgerMenu.scss';
 
-
 export const BurgerMenu = () => {
-
   return (
     <>
       <div className="burger__menu">
@@ -39,6 +37,5 @@ export const BurgerMenu = () => {
         </div>
       </div>
     </>
-    
   );
 };
