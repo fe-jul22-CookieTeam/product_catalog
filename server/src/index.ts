@@ -7,16 +7,13 @@ import fs from 'fs';
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-
 app.use(cors());
 app.use(express.static('data'))
 app.use(express.json());
 
 app.get('/products', (req, res) => {
   const phonesData = fs.readFileSync('./data/phones.json', 'utf-8');
-
   res.statusCode = 200;
-
   res.send(JSON.parse(phonesData));
 });
 
