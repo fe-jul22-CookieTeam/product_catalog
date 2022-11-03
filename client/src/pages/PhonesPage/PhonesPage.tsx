@@ -1,6 +1,5 @@
-// import { ItemCard } from '../../components/ItemCard';
 import './PhonesPage.module.scss';
-// import '../../styles/blocs/grid.scss';
+
 import React, { useState } from 'react';
 import { Pagination } from '../../components/Pagination/Pagination';
 

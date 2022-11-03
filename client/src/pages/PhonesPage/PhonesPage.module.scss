@@ -19,6 +19,7 @@
 }
 
 .pagePhone {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -89,12 +90,12 @@
     display: grid;
     width: 100%;
     grid-template-columns: repeat(1, 290px);
-    gap: 48px;
+    gap: 40px 16px;
     justify-content: center;
     // justify-content: space-between;
 
     @media (min-width: 640px) {
-      grid-template-columns: repeat(2, 290px);
+      grid-template-columns: repeat(2, 288px);
     }
 
     @media (min-width: 768px) {
@@ -102,7 +103,7 @@
     }
 
     @media (min-width: 1175px) {
-      grid-template-columns: repeat(4, 270px);
+      grid-template-columns: repeat(4, 272px);
     }
   }
 }
@@ -135,3 +136,4 @@
     margin-bottom: 40px;
   }
 }
+
