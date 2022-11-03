@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../../routes';
-import './BurgerMenu.scss';
+import './HeaderMenu.scss';
 
 export const HeaderMenu = () => {
   return (
@@ -32,8 +32,8 @@ export const HeaderMenu = () => {
         </div>
       </div>
       <div className="burger__menu--bottom">
-        <button className="burger__menu--bottom-favourites"></button>
-        <button className="burger__menu--bottom-basket"></button>
+        <div className="burger__menu--bottom-favourites"></div>
+        <div className="burger__menu--bottom-basket"></div>
       </div>
     </div>
   );
