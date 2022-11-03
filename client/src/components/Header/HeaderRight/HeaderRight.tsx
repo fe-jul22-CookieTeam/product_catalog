@@ -1,13 +1,11 @@
-import { useState} from 'react';
+import { useState } from 'react';
 import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
 import { ROUTES } from '../../../routes';
 import header from '../Header.module.scss';
 import { HeaderMenu } from '../HeaderMenu';
 
-
 export const HeaderRight = () => {
-
   const [open, setOpen] = useState(false);
 
   <div className={header.right}>
