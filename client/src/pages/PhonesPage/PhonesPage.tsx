@@ -95,8 +95,6 @@ export const PhonesPage: React.FC = () => {
           getNumbers={getNumbers}
         />
       </div>
-
-      {/* <ItemCard /> */}
     </>
   );
 };

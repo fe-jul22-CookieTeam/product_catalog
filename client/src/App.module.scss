@@ -1,4 +1,5 @@
 @import './styles/utils/vars';
+@import './styles/blocks/container.scss';
 
 @font-face {
   font-family: Mont;
@@ -48,10 +49,10 @@ ul {
 }
 
 #root {
-  height: 100vh;
+  height: 100%;
 }
 
-.App {
+.app {
   display: flex;
   flex-direction: column;
   height: 100%;
