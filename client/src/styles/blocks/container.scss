@@ -2,6 +2,9 @@
 
 .container {
   margin: 0 auto;
+  width: 100%;
+  // this width includes internal desktop padding, dont worry this not work for mobile
+  // max-width: 1175px;
   max-width: 1200px;
 
   @include onPhone {

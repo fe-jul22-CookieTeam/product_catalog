@@ -1,6 +1,5 @@
-// import { ItemCard } from '../../components/ItemCard';
 import './PhonesPage.module.scss';
-import '../../styles/blocks/grid.scss';
+
 import React, { useState } from 'react';
 import { Pagination } from '../../components/Pagination/Pagination';
 
@@ -28,7 +27,7 @@ export const PhonesPage: React.FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="containerPhone">
         <div className="pagePhone">
           <div className="menuRout">
             <img src="./images/Home.svg" alt="" className="menuRout__home" />
@@ -79,7 +78,7 @@ export const PhonesPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="pagePhone__catalog grig">
+          <div className="pagePhone__catalog">
             <Card />
             <Card />
             <Card />
@@ -96,8 +95,6 @@ export const PhonesPage: React.FC = () => {
           getNumbers={getNumbers}
         />
       </div>
-
-      {/* <ItemCard /> */}
     </>
   );
 };
