@@ -111,6 +111,9 @@
   }
 
   &__button {
+    border: none;
+    outline: none;
+    cursor: pointer;
     display: flex;
     background-image: url(../../images/button-back.svg);
     height: 32px;
@@ -122,10 +125,5 @@
     &:hover {
       background-image: url(../../images/button-back--hover.svg);
     }
-  }
-
-  &__link {
-    width: 32px;
-    height: 32px;
   }
 }
