@@ -3,6 +3,7 @@ import { ROUTES } from '../../routes';
 import './BurgerMenu.scss';
 
 export const BurgerMenu = () => {
+
   return (
     <div className="burger__menu">
       <div className="burger__menu--top">
@@ -31,6 +32,7 @@ export const BurgerMenu = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </>
+    
   );
 };
