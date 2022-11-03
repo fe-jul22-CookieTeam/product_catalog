@@ -94,15 +94,15 @@
     // justify-content: space-between;
 
     @media (min-width: 640px) {
-    grid-template-columns: repeat(2, 290px)
+      grid-template-columns: repeat(2, 290px);
     }
 
-     @media (min-width: 768px) {
-      grid-template-columns: repeat(3, 230px)
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 230px);
     }
 
     @media (min-width: 1175px) {
-      grid-template-columns: repeat(4, 270px)
+      grid-template-columns: repeat(4, 270px);
     }
   }
 }
