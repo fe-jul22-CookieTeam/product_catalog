@@ -1,12 +1,16 @@
-import { Link } from 'react-router-dom';
-import { ROUTES } from '../../../routes';
 import footer from '../Footer.module.scss';
 
-export const FooterBack = () => (
-  <div className={footer.back}>
-    <div className={footer.back__title}>Back to top</div>
-    <div className={footer.back__button}>
-      <Link to={ROUTES.home} className={footer.back__link} />
+export const FooterBack = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
+  return (
+    <div className={footer.back}>
+      <div className={footer.back__title}>Back to top</div>
+      <button className={footer.back__button} onClick={scrollToTop} />
     </div>
-  </div>
-);
+  );
+};
