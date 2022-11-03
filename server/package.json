@@ -29,10 +29,11 @@
     "webpack-dev-server": "^4.11.1"
   },
   "scripts": {
+    "start": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build": "tsc",
     "build-dev": "npm run build && NODE_ENV=development node --inspect dist/index.js",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "start": "ts-node-dev --respawn --transpile-only src/index.ts"
+    
   },
   "lint-staged": {
     "*.js": "npm run lint"
