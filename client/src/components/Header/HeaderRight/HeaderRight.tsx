@@ -1,9 +1,15 @@
+import { useState} from 'react';
 import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
 import { ROUTES } from '../../../routes';
 import header from '../Header.module.scss';
+import { HeaderMenu } from '../HeaderMenu';
 
-export const HeaderRight = () => (
+
+export const HeaderRight = () => {
+
+  const [open, setOpen] = useState(false);
+
   <div className={header.right}>
     <NavLink
       to={ROUTES.favourites}
@@ -28,6 +34,8 @@ export const HeaderRight = () => (
     <NavLink
       to={ROUTES.menu}
       className={classNames(header.menu, header.right__link)}
+      onClick={() => setOpen(!open)}
     />
-  </div>
-);
+    {open && <HeaderMenu />}
+  </div>;
+};
