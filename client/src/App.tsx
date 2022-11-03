@@ -4,9 +4,7 @@ import './App.scss';
 import './styles/blocks/container.scss';
 import { Footer } from './components/Footer';
 
-
 const App = () => {
-
   return (
     <div className="App">
       <Header />
