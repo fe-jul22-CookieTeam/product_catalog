@@ -55,13 +55,13 @@
     gap: 16px;
   }
 
-  &__sort-by {
+  &__sortBy {
     display: flex;
     flex-direction: column;
     gap: 4px;
   }
 
-  &__sort-by-title {
+  &__sortByTitle {
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
@@ -69,7 +69,7 @@
     color: $secondary;
   }
 
-  &__sort-by-select {
+  &__sortBySelect {
     width: 187px;
     height: 40px;
     color: $white;
@@ -78,7 +78,7 @@
     border: 1px solid #b4bdc4;
   }
 
-  &__items-on-page {
+  &__itemsOnPage {
     display: flex;
     flex-direction: column;
     gap: 4px;

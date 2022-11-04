@@ -1,9 +1,9 @@
-import './PhonesPage.scss';
+import phonesPages from './PhonesPage.module.scss';
 
 import React, { useState } from 'react';
 import { Pagination } from '../../components/Pagination/Pagination';
 
-const Card = () => <div className="card">Card</div>;
+const Card = () => <div className={phonesPages.card}>Card</div>;
 
 export const PhonesPage: React.FC = () => {
   const [page, setPage] = useState(1);
@@ -27,28 +27,28 @@ export const PhonesPage: React.FC = () => {
 
   return (
     <>
-      <div className="containerPhone">
-        <div className="pagePhone">
-          <div className="menuRout">
-            <img src="./images/Home.svg" alt="" className="menuRout__home" />
+      <div className={phonesPages.containerPhone}>
+        <div className={phonesPages.pagePhone}>
+          <div className={phonesPages.menuRout}>
+            <img src="./images/Home.svg" alt="" className={phonesPages.menuRout__home} />
 
             <img
               src="../../images/chevron-R.svg"
               alt=""
-              className="menuRout__arrow"
+              className={phonesPages.menuRout__arrow}
             />
-            <p className="menuRout__title">Phones</p>
+            <p className={phonesPages.menuRout__title}>Phones</p>
           </div>
 
-          <h1 className="pagePhone__title">Mobile phones</h1>
+          <h1 className={phonesPages.pagePhone__title}>Mobile phones</h1>
 
-          <p className="pagePhone__count">95 models</p>
+          <p className={phonesPages.pagePhone__count}>95 models</p>
 
-          <div className="pagePhone__sorter">
-            <div className="pagePhone__sort-by">
-              <p className="pagePhone__sort-by-title">Sort by</p>
+          <div className={phonesPages.pagePhone__sorter}>
+            <div className={phonesPages.pagePhone__sortBy}>
+              <p className={phonesPages.pagePhone__sortByTitle}>Sort by</p>
 
-              <select name="" id="" className="pagePhone__sort-by-select">
+              <select name="" id="" className={phonesPages.pagePhone__sortBySelect}>
                 <option value="newest" selected>
                   Newest
                 </option>
@@ -57,13 +57,13 @@ export const PhonesPage: React.FC = () => {
               </select>
             </div>
 
-            <div className="pagePhone__items-on-page">
-              <p className="pagePhone__sort-by-title">Items on page</p>
+            <div className={phonesPages.pagePhone__itemsOnPage}>
+              <p className={phonesPages.pagePhone__sortByTitle}>Items on page</p>
 
               <select
                 name=""
                 id=""
-                className="pagePhone__sort-by-select"
+                className={phonesPages.pagePhone__sortBySelect}
                 value={perPage}
                 onChange={(event) => {
                   setPerPage(+event.target.value);
@@ -78,7 +78,7 @@ export const PhonesPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="pagePhone__catalog">
+          <div className={phonesPages.pagePhone__catalog}>
             <Card />
             <Card />
             <Card />
