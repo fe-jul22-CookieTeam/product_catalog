@@ -23,6 +23,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
 
   .title {
     font-weight: 800;
@@ -69,7 +70,7 @@
     color: $secondary;
   }
 
-  /sortBySelect {
+  .sortBySelect {
     width: 187px;
     height: 40px;
     color: $white;
@@ -105,7 +106,6 @@
       grid-template-columns: repeat(4, 272px);
     }
   }
-}
 
 .menuRout {
   display: flex;
