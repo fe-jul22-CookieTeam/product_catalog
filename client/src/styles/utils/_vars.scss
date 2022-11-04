@@ -17,8 +17,12 @@ $headerMarginBottom: 25px;
 $footerSizeSmall: 256px;
 $footerSizeBig: 96px;
 
-$contentSizePhone: calc(100vh - $headerSizeSmall - $footerSizeSmall - $headerMarginBottom);
-$contentSizeTablet: calc(100vh - $headerSizeSmall - $footerSizeBig - $headerMarginBottom);
-$contentSizeDesktop: calc(100vh - $headerSizeBig - $footerSizeBig - $headerMarginBottom);
-
-
+$contentSizePhone: calc(
+  100vh - $headerSizeSmall - $footerSizeSmall - $headerMarginBottom
+);
+$contentSizeTablet: calc(
+  100vh - $headerSizeSmall - $footerSizeBig - $headerMarginBottom
+);
+$contentSizeDesktop: calc(
+  100vh - $headerSizeBig - $footerSizeBig - $headerMarginBottom
+);
