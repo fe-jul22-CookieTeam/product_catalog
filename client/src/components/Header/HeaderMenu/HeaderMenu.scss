@@ -1,18 +1,15 @@
-@import '../../styles/utils/vars';
-@import '../../styles/utils/mixins';
+@import '../../../styles/utils/vars';
+@import '../../../styles/utils/mixins';
 
 .burger__menu {
   box-sizing: border-box;
   text-align: center;
   height: 100vh;
-<<<<<<< HEAD
-  max-width: 320px;
-  background-color: #161827;
-=======
   width: 100%;
   background-color: #0f1121;
->>>>>>> c249542 (trying to pull from main)
   position: relative;
+  transform: translateX(-100%);
+  transition: all 0.2s;
 
   &--top {
     display: flex;
@@ -22,7 +19,7 @@
 
   &--top-logo {
     display: flex;
-    background-image: url(../../images/logo.svg);
+    background-image: url(../../../images/logo.svg);
     height: 22px;
     width: 60px;
     background-size: contain;
@@ -35,7 +32,7 @@
     width: 16px;
     padding: 26px;
     border-left: solid #3b3e4a 1px;
-    background-image: url(../../images/close.svg);
+    background-image: url(../../../images/close.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 16px;
@@ -66,11 +63,8 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-<<<<<<< HEAD
-=======
 
     border-top: solid #75767f 1px;
->>>>>>> c249542 (trying to pull from main)
   }
 
   &--bottom-favourites {
@@ -78,7 +72,7 @@
     background-color: #161827;
     padding: 25px 72px;
     width: 50%;
-    background-image: url(../../images/favourites.svg);
+    background-image: url(../../../images/favourites.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -88,8 +82,12 @@
     background-color: #161827;
     padding: 25px 72px;
     width: 50%;
-    background-image: url(../../images/cart.svg);
+    background-image: url(../../../images/cart.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
+}
+
+.burger__menu.open {
+  transform: translateX(0);
 }

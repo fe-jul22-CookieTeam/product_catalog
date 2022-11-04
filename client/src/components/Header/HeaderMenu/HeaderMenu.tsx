@@ -1,10 +1,19 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../../routes';
-import './BurgerMenu.scss';
+import './HeaderMenu.scss';
 
-export const HeaderMenu = () => {
+export const HeaderMenu = ({
+  open,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: (status: boolean) => void;
+}): JSX.Element => {
   return (
-    <div className="burger__menu">
+    <div
+      className={open ? 'burger__menu open' : 'burger__menu'}
+      onClick={() => setOpen(false)}
+    >
       <div className="burger__menu--top">
         <Link to={ROUTES.home} className="burger__menu--top-logo" />
         <Link to={ROUTES.home} className="burger__menu--top-close" />
@@ -32,9 +41,9 @@ export const HeaderMenu = () => {
         </div>
       </div>
       <div className="burger__menu--bottom">
-          <button className="burger__menu--bottom-favourites"></button>
-          <button className="burger__menu--bottom-basket"></button>
-        </div>
+        <button className="burger__menu--bottom-favourites"></button>
+        <button className="burger__menu--bottom-basket"></button>
+      </div>
     </div>
   );
 };
