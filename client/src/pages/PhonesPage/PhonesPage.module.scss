@@ -23,8 +23,9 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
 
-  &__title {
+  .title {
     font-weight: 800;
     font-size: 32px;
     line-height: 41px;
@@ -37,7 +38,7 @@
     }
   }
 
-  &__count {
+  .count {
     font-weight: 600;
     font-size: 14px;
     line-height: 21px;
@@ -49,19 +50,19 @@
     }
   }
 
-  &__sorter {
+  .sorter {
     display: flex;
     align-items: flex-start;
     gap: 16px;
   }
 
-  &__sort-by {
+  .sortBy {
     display: flex;
     flex-direction: column;
     gap: 4px;
   }
 
-  &__sort-by-title {
+  .sortByTitle {
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
@@ -69,7 +70,7 @@
     color: $secondary;
   }
 
-  &__sort-by-select {
+  .sortBySelect {
     width: 187px;
     height: 40px;
     color: $white;
@@ -78,7 +79,7 @@
     border: 1px solid #b4bdc4;
   }
 
-  &__items-on-page {
+  .itemsOnPage {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -86,13 +87,12 @@
     margin-right: 16px;
   }
 
-  &__catalog {
+  .catalog {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(1, 290px);
     gap: 40px 16px;
     justify-content: center;
-    // justify-content: space-between;
 
     @media (min-width: 640px) {
       grid-template-columns: repeat(2, 288px);
@@ -106,7 +106,6 @@
       grid-template-columns: repeat(4, 272px);
     }
   }
-}
 
 .menuRout {
   display: flex;
