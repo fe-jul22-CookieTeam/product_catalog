@@ -1,4 +1,4 @@
-import './PhonesPage.module.scss';
+import './PhonesPage.scss';
 
 import React, { useState } from 'react';
 import { Pagination } from '../../components/Pagination/Pagination';
@@ -79,6 +79,7 @@ export const PhonesPage: React.FC = () => {
           </div>
 
           <div className="pagePhone__catalog">
+            <Card />
             <Card />
             <Card />
             <Card />
