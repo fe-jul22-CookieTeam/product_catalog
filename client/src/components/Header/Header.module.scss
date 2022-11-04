@@ -8,7 +8,19 @@
   position: sticky;
   top: 0;
   background-color: $black;
-  margin-bottom: 25px;
+  margin-bottom: $headerMarginBottom;
+
+  @include onPhone {
+    height: $headerSizeSmall;
+  }
+
+  @include onTablet {
+    height: $headerSizeSmall;
+  }
+
+  @include onDesktop {
+    height: $headerSizeBig;
+  }
 }
 
 .left {
