@@ -13,6 +13,7 @@
   &__content {
     display: flex;
     align-items: baseline;
+    cursor: pointer;
     transition: all 0.3s;
 
     &:hover {

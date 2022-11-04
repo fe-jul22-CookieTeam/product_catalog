@@ -8,9 +8,9 @@ export const FooterBack = () => {
   };
 
   return (
-    <div className={footer.back}>
+    <div className={footer.back} onClick={scrollToTop}>
       <div className={footer.back__title}>Back to top</div>
-      <button className={footer.back__button} onClick={scrollToTop} />
+      <button className={footer.back__button} />
     </div>
   );
 };
