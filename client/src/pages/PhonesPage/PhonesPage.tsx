@@ -30,7 +30,11 @@ export const PhonesPage: React.FC = () => {
       <div className={phonesPages.containerPhone}>
         <div className={phonesPages.pagePhone}>
           <div className={phonesPages.menuRout}>
-            <img src="./images/Home.svg" alt="" className={phonesPages.menuRout__home} />
+            <img
+              src="./images/Home.svg"
+              alt=""
+              className={phonesPages.menuRout__home}
+            />
 
             <img
               src="../../images/chevron-R.svg"
@@ -40,15 +44,15 @@ export const PhonesPage: React.FC = () => {
             <p className={phonesPages.menuRout__title}>Phones</p>
           </div>
 
-          <h1 className={phonesPages.pagePhone__title}>Mobile phones</h1>
+          <h1 className={phonesPages.title}>Mobile phones</h1>
 
-          <p className={phonesPages.pagePhone__count}>95 models</p>
+          <p className={phonesPages.count}>95 models</p>
 
-          <div className={phonesPages.pagePhone__sorter}>
-            <div className={phonesPages.pagePhone__sortBy}>
-              <p className={phonesPages.pagePhone__sortByTitle}>Sort by</p>
+          <div className={phonesPages.sorter}>
+            <div className={phonesPages.sortBy}>
+              <p className={phonesPages.sortByTitle}>Sort by</p>
 
-              <select name="" id="" className={phonesPages.pagePhone__sortBySelect}>
+              <select name="" id="" className={phonesPages.sortBySelect}>
                 <option value="newest" selected>
                   Newest
                 </option>
@@ -57,13 +61,13 @@ export const PhonesPage: React.FC = () => {
               </select>
             </div>
 
-            <div className={phonesPages.pagePhone__itemsOnPage}>
-              <p className={phonesPages.pagePhone__sortByTitle}>Items on page</p>
+            <div className={phonesPages.itemsOnPage}>
+              <p className={phonesPages.sortByTitle}>Items on page</p>
 
               <select
                 name=""
                 id=""
-                className={phonesPages.pagePhone__sortBySelect}
+                className={phonesPages.sortBySelect}
                 value={perPage}
                 onChange={(event) => {
                   setPerPage(+event.target.value);
@@ -78,7 +82,7 @@ export const PhonesPage: React.FC = () => {
             </div>
           </div>
 
-          <div className={phonesPages.pagePhone__catalog}>
+          <div className={phonesPages.catalog}>
             <Card />
             <Card />
             <Card />
