@@ -25,87 +25,87 @@
   gap: 24px;
 }
 
-  .title {
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 41px;
-    letter-spacing: -0.01em;
-    margin-bottom: 22px;
+.title {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 41px;
+  letter-spacing: -0.01em;
+  margin-bottom: 22px;
 
-    @include onTablet {
-      font-size: 48px;
-      line-height: 56px;
-    }
+  @include onTablet {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
+.count {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: $secondary;
+  margin-bottom: 22px;
+
+  @include onTablet {
+    margin-bottom: 40px;
+  }
+}
+
+.sorter {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.sortBy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sortByTitle {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: $secondary;
+}
+
+.sortBySelect {
+  width: 187px;
+  height: 40px;
+  color: $white;
+  background: $secondary;
+
+  border: 1px solid #b4bdc4;
+}
+
+.itemsOnPage {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  margin-right: 16px;
+}
+
+.catalog {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, 290px);
+  gap: 40px 16px;
+  justify-content: center;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 288px);
   }
 
-  .count {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 21px;
-    color: $secondary;
-    margin-bottom: 22px;
-
-    @include onTablet {
-      margin-bottom: 40px;
-    }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 230px);
   }
 
-  .sorter {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
+  @media (min-width: 1175px) {
+    grid-template-columns: repeat(4, 272px);
   }
-
-  .sortBy {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .sortByTitle {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-
-    color: $secondary;
-  }
-
-  .sortBySelect {
-    width: 187px;
-    height: 40px;
-    color: $white;
-    background: $secondary;
-
-    border: 1px solid #b4bdc4;
-  }
-
-  .itemsOnPage {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-
-    margin-right: 16px;
-  }
-
-  .catalog {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(1, 290px);
-    gap: 40px 16px;
-    justify-content: center;
-
-    @media (min-width: 640px) {
-      grid-template-columns: repeat(2, 288px);
-    }
-
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(3, 230px);
-    }
-
-    @media (min-width: 1175px) {
-      grid-template-columns: repeat(4, 272px);
-    }
-  }
+}
 
 .menuRout {
   display: flex;

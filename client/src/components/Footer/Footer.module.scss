@@ -3,19 +3,24 @@
 
 .footer {
   display: flex;
-  flex: 0 0 auto;
   border-top: 1px solid $secondary;
   justify-content: space-between;
 
   padding: 32px 32px;
 
   @include onPhone {
+    height: $footerSizeSmall;
     flex-direction: column;
     padding: 32px 16px;
   }
 
   @include onTablet {
-    height: 96px;
+    height: $footerSizeBig;
+    align-items: center;
+  }
+
+  @include onDesktop {
+    height: $footerSizeBig;
     align-items: center;
   }
 }

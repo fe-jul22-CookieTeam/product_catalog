@@ -9,3 +9,20 @@ $green: #27ae60;
 $accent-1: #905bff;
 $accent-2: #a378ff;
 $white: #f1f2f9;
+
+$headerSizeSmall: 48px;
+$headerSizeBig: 64px;
+$headerMarginBottom: 25px;
+
+$footerSizeSmall: 256px;
+$footerSizeBig: 96px;
+
+$contentSizePhone: calc(
+  100vh - $headerSizeSmall - $footerSizeSmall - $headerMarginBottom
+);
+$contentSizeTablet: calc(
+  100vh - $headerSizeSmall - $footerSizeBig - $headerMarginBottom
+);
+$contentSizeDesktop: calc(
+  100vh - $headerSizeBig - $footerSizeBig - $headerMarginBottom
+);

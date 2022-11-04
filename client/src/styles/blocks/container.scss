@@ -1,4 +1,5 @@
 @import '../utils/mixins';
+@import '../utils/vars';
 
 .container {
   margin: 0 auto;
@@ -9,13 +10,16 @@
 
   @include onPhone {
     padding: 0 16px;
+    min-height: $contentSizePhone;
   }
 
   @include onTablet {
     padding: 0 24px;
+    min-height: $contentSizeTablet;
   }
 
   @include onDesktop {
     padding: 0 32px;
+    min-height: $contentSizeDesktop;
   }
 }
