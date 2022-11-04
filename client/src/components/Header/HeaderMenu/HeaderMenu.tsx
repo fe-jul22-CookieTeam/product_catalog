@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { ROUTES } from '../../routes';
-import './BurgerMenu.scss';
+import { ROUTES } from '../../../routes';
+import './HeaderMenu.scss';
 
-export const BurgerMenu = () => {
+export const HeaderMenu = () => {
   return (
     <div className="burger__menu">
       <div className="burger__menu--top">
@@ -32,8 +32,8 @@ export const BurgerMenu = () => {
         </div>
       </div>
       <div className="burger__menu--bottom">
-        <button className="burger__menu--bottom-favourites"></button>
-        <button className="burger__menu--bottom-basket"></button>
+        <div className="burger__menu--bottom-favourites"></div>
+        <div className="burger__menu--bottom-basket"></div>
       </div>
     </div>
   );

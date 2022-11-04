@@ -1,20 +1,23 @@
+@import '../../../styles/utils/vars';
+@import '../../../styles/utils/mixins';
+
 .burger__menu {
   box-sizing: border-box;
   text-align: center;
   height: 100vh;
-  max-width: 320px;
-  background-color: #161827;
+  width: 100%;
+  background-color: #0F1121;
   position: relative;
 
   &--top {
     display: flex;
     justify-content: space-between;
-    border: solid #3b3e4a 1px;
+    border-bottom: solid #3b3e4a 1px;
   }
 
   &--top-logo {
     display: flex;
-    background-image: url(../../images/logo.svg);
+    background-image: url(../../../images/logo.svg);
     height: 22px;
     width: 60px;
     background-size: contain;
@@ -24,13 +27,13 @@
 
   &--top-close {
     display: flex;
-    height: 48px;
-    width: 48px;
+    width: 16px;
+    padding: 26px;
     border-left: solid #3b3e4a 1px;
-    background-image: url(../../images/cross.svg);
+    background-image: url(../../../images/close.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 16px;
   }
 
   &--main {
@@ -58,24 +61,25 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    
+    border-top: solid #75767f 1px;
   }
 
   &--bottom-favourites {
-    border: solid #75767f 1px;
+    border-right: solid #75767f 1px;
     background-color: #161827;
     padding: 25px 72px;
     width: 50%;
-    background-image: url(../../images/favourites.svg);
+    background-image: url(../../../images/favourites.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &--bottom-basket {
-    border: solid #75767f 1px;
     background-color: #161827;
     padding: 25px 72px;
     width: 50%;
-    background-image: url(../../images/cart.svg);
+    background-image: url(../../../images/cart.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
