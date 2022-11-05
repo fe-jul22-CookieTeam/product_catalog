@@ -33,18 +33,10 @@ export const HeaderRight = () => {
       <div
         className={classNames(header.menu, header.right__link)}
         onClick={() => setOpen(true)}
-      >
-      </div>
-      <div>
-        {
-          open ? <HeaderMenu open={open} setOpen={setOpen}/> : null
-        }
-        
-      </div>
-       
+      ></div>
+      <div>{open ? <HeaderMenu open={open} setOpen={setOpen} /> : null}</div>
     </div>
   );
 };
 
-
-//  
+//
